@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+.env
+.env.*
+!.env.example
+*.pem
+*service-account*.json
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+coverage
+.DS_Store
