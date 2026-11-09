@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-label="MONEY — Your money. Your move.">
+  <rect width="1280" height="340" fill="#2C0E11"/>
+  <rect x="0" y="300" width="1280" height="40" fill="#322C25"/>
+  <rect x="0" y="296" width="1280" height="4" fill="#B28558"/>
+  <g transform="translate(96 78)">
+    <rect x="0" y="0" width="84" height="84" rx="24" fill="#B28558"/>
+    <path d="M58 30A20 20 0 1 0 58 54" fill="none" stroke="#2C0E11" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="57" cy="42" r="6" fill="#2C0E11"/>
+  </g>
+  <text x="212" y="152" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif" font-style="italic" font-size="104" fill="#F1E6D6">Money</text>
+  <text x="98" y="222" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif" font-style="italic" font-size="40" fill="#D2B48C">Your money. Your move.</text>
+  <text x="98" y="266" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#B28558" letter-spacing="1.5">FREE PAYMENT INFRASTRUCTURE FOR EVERY DEVELOPER</text>
+  <g transform="translate(860 70)" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="16">
+    <rect x="0" y="0" width="324" height="190" rx="16" fill="#1B0709" stroke="#4D443A"/>
+    <text x="22" y="34" fill="#857868">POST /api/v1/payment-orders</text>
+    <text x="22" y="72" fill="#D2B48C">{ "amount": 50000,</text>
+    <text x="22" y="98" fill="#D2B48C">  "currency": "INR" }</text>
+    <line x1="22" y1="120" x2="302" y2="120" stroke="#4D443A" stroke-dasharray="4 5"/>
+    <rect x="22" y="138" width="78" height="30" rx="15" fill="#2B3A26"/><text x="38" y="158" fill="#9DB98B" font-size="14">Created</text>
+    <rect x="108" y="138" width="98" height="30" rx="15" fill="#2B3A26"/><text x="124" y="158" fill="#9DB98B" font-size="14">Processing</text>
+    <rect x="214" y="138" width="78" height="30" rx="15" fill="#2B3A26"/><text x="230" y="158" fill="#9DB98B" font-size="14">Success</text>
+  </g>
+</svg>

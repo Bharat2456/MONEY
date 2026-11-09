@@ -10,12 +10,13 @@ Written honestly. "Tested" means a command actually ran and passed in the build 
 | Syntax check (TypeScript parser) of all 76 `.ts/.tsx` files | clean |
 | Type-check of UI + route handlers using **loose stubs** for next/react/firebase | no errors in project code (only artefacts of the stubs) |
 | Sample merchant (`examples/merchant-demo`) run against a fake MONEY API | 8/8 checks pass (order redirect, server-to-server verification, signed webhook, dedupe, bad signature) |
+| UI pages rendered in headless Chromium (real components + real stylesheet, driven by the real engine via `tools/media`) | 18 screenshots + a ~2-minute walkthrough recorded with **zero browser errors**; a full new-user journey (register → project → keys → webhook → order → checkout → refund → timeline) completed against the preview backend |
 | ZIP extracted into a clean directory, then `tsx --test` | 33 / 33 pass; secret scan (private keys, Firebase keys, `money_test_sk_`, `whsec_`) found nothing; no `.env`, `node_modules` or `.next` inside |
 
 ## NOT verified (the build sandbox had no network, so `npm install` was impossible)
 - `npm install`, `npm run lint`, `npm run typecheck` (with real React/Next types), `npm run build`, `npm run dev`.
 - Anything that talks to **Firebase**: `FirestoreStore`, token verification, Firebase Auth screens, security-rule deployment, the emulator mode.
-- The **UI has never been rendered or visually checked** — layout/contrast were designed from the palette but not inspected in a browser.
+- The UI **has not been compiled by `next build`** and has not been seen with the production toolchain. The screenshots/video come from a preview harness that uses the Tailwind 4 engine (production pins 3.4), stubs Firebase sign-in and the Next router, and substitutes the display font (Lora for Cormorant Garamond). Small visual differences are possible. Admin console and the Firebase-backed auth screens' real behaviour were not captured.
 - `safeTransport` (the SSRF-pinned HTTPS client) is written but unit-tested only through an injected fake transport; its real network behaviour is unverified.
 - HTTP-level behaviour of the API routes (status codes, headers). Business logic behind them _is_ tested.
 - `package-lock.json` does not exist yet — `npm install` creates it; commit it afterwards.
